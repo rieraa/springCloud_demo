@@ -9,7 +9,7 @@ spring:
     name: user-server
   datasource:
     username: root
-    password: 256889559yY
+    password: "2568898559yY"
     url: jdbc:mysql://sh-cynosdbmysql-grp-lr3zkq1e.sql.tencentcdb.com:23946/elmSpringCloud?characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
