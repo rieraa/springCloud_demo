@@ -28,8 +28,7 @@ public class UserController {
     }
 
     @GetMapping("/getUserById/{userId}")
-    public CommonResult<Integer> getUserById(@PathVariable("userId") String userId) throws
-            Exception {
+    public CommonResult<Integer> getUserById(@PathVariable("userId") String userId) throws Exception {
         int result = userService.getUserById(userId);
         return new CommonResult(200, "success", result);
     }

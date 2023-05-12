@@ -1,0 +1,19 @@
+server:
+  port: 10300
+spring:
+  application:
+    name: business-server
+  #业务配置
+  datasource:
+    username: root
+    password: "2568898559yY"
+    url: jdbc:mysql://sh-cynosdbmysql-grp-lr3zkq1e.sql.tencentcdb.com:23946/elmSpringCloud?characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#业务配置
+logging:
+  level:
+    org.springframework: debug
+    com.I.mapper: debug
+#业务配置 mybatis:
+mapper-locations:
+  classpath:mapper/*.xml type-aliases-package: com.Iynew.po
