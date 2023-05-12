@@ -19,6 +19,7 @@
         <module>food_server_10200</module>
         <module>business_server_10300</module>
         <module>cart_server_10400</module>
+        <module>deliveryaddress_server_10500</module>
     </modules>
     <properties>
         <java.version>17</java.version>

@@ -9,7 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cart_server_10400</artifactId>
+    <groupId>org.example</groupId>
+    <artifactId>deliveryaddress_server_10500</artifactId>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

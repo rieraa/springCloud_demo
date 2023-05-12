@@ -13,7 +13,8 @@ spring:
 logging:
   level:
     org.springframework: debug
-    com.I.mapper: debug
-#业务配置 mybatis:
-mapper-locations:
-  classpath:mapper/*.xml type-aliases-package: com.Iynew.po
+    com.Iynew.mapper: debug
+#业务配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.Iynew.po

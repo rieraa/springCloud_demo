@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cart_server_10400" />
         <module name="food_server_10200" />
+        <module name="deliveryaddress_server_10500" />
         <module name="user_server_10100" />
         <module name="business_server_10300" />
       </profile>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="business_server_10300" options="-parameters" />
       <module name="cart_server_10400" options="-parameters" />
+      <module name="deliveryaddress_server_10500" options="-parameters" />
       <module name="food_server_10200" options="-parameters" />
       <module name="user_server_10100" options="-parameters" />
     </option>
