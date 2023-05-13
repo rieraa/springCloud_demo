@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>deliveryaddress_server_10500</artifactId>
+    <artifactId>orders_server_10600</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -1,0 +1,20 @@
+server:
+  port: 10500
+
+spring:
+  application:
+    name: deliveryaddress-server
+  datasource:
+    username: root
+    password: "2568898559yY"
+    url: jdbc:mysql://sh-cynosdbmysql-grp-lr3zkq1e.sql.tencentcdb.com:23946/elmSpringCloud?characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+logging:
+  level:
+    org.springframework: debug
+    debug com.Iynew.mapper: debug
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  classpath:mapper/*.xml type-aliases-package: com.Iynew.po

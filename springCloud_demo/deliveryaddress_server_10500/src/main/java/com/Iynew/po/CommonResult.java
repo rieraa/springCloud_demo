@@ -1,4 +1,4 @@
-package org.example.po;
+package com.Iynew.po;
 
 import java.io.Serializable;
 

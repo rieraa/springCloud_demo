@@ -1,14 +1,11 @@
-package org.example;
+package com.Iynew;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.Iynew.mapper")
-public class CartServe {
+public class OrdersServe {
     public static void main(String[] args) {
-        SpringApplication.run(CartServe.class, args);
+        SpringApplication.run(OrdersServe.class, args);
     }
 }
-

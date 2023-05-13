@@ -1,16 +1,15 @@
-package org.example.service.impl;
+package com.Iynew.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.neusoft.elmboot.mapper.DeliveryAddressMapper;
-import com.neusoft.elmboot.po.DeliveryAddress;
-import com.neusoft.elmboot.service.DeliveryAddressService;
+import com.Iynew.mapper.DeliveryAddressMapper;
+import com.Iynew.po.DeliveryAddress;
+import com.Iynew.service.DeliveryAddressService;
 
 @Service
 public class DeliveryAddressServiceImpl implements DeliveryAddressService {
-
     @Autowired
     private DeliveryAddressMapper deliveryAddressMapper;
 
@@ -28,10 +27,8 @@ public class DeliveryAddressServiceImpl implements DeliveryAddressService {
     public int saveDeliveryAddress(DeliveryAddress deliveryAddress) {
         return deliveryAddressMapper.saveDeliveryAddress(deliveryAddress);
     }
- 
-4.2.2.4.Food
-    @Override
 
+    @Override
     public int updateDeliveryAddress(DeliveryAddress deliveryAddress) {
         return deliveryAddressMapper.updateDeliveryAddress(deliveryAddress);
     }
