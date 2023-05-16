@@ -1,10 +1,10 @@
 package com.Iynew.mapper;
 
-import java.util.List;
-
+import com.Iynew.po.Food;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import com.Iynew.po.Food;
+
+import java.util.List;
 
 @Mapper
 public interface FoodMapper {

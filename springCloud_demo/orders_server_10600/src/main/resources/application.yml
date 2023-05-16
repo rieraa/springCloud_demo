@@ -2,7 +2,7 @@ server:
   port: 10600
 logging:
   level:
-    org.springframework:
+    org.springframework: debug
     debug com.Iynew.mapper: debug
 spring:
   application:
