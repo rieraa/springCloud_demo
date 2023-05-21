@@ -1,22 +1,17 @@
 server:
-  port: 10300
-
-
+  port: 10201
+logging:
+  level:
+    org.springframework: debug
+    com.neusoft.mapper: debug
 spring:
   application:
-    name: business-server
-
+    name: food-server
   datasource:
     username: root
     password: "2568898559yY"
     url: jdbc:mysql://sh-cynosdbmysql-grp-lr3zkq1e.sql.tencentcdb.com:23946/elmSpringCloud?characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-logging:
-  level:
-    org.springframework: debug
-    com.Iynew.mapper: debug
-    com.example.feign: DEBUG
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.Iynew.po
@@ -28,7 +23,3 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-
-feign:
-  hystrix:
-    enabled: true

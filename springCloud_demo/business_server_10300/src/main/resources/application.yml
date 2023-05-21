@@ -16,7 +16,7 @@ logging:
   level:
     org.springframework: debug
     com.Iynew.mapper: debug
-
+    com.example.feign: DEBUG
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.Iynew.po
@@ -28,3 +28,7 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+feign:
+  hystrix:
+    enabled: true

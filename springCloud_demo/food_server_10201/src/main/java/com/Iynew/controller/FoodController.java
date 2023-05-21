@@ -20,6 +20,6 @@ public class FoodController {
     @GetMapping("/listFoodByBusinessId/{businessId}")
     public CommonResult<List> listFoodByBusinessId(@PathVariable("businessId") Integer businessId) throws Exception {
         List<Food> list = foodService.listFoodByBusinessId(businessId);
-        return new CommonResult(200, "success(10200)", list);
+        return new CommonResult(200, "success(10201)", list);
     }
 }

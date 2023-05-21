@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="food_server_10200" />
         <module name="deliveryaddress_server_10500" />
+        <module name="food_server_10201" />
         <module name="eureka_server_13001" />
         <module name="eureka_server_13000" />
         <module name="cart_server_10400" />
@@ -33,6 +34,7 @@
       <module name="eureka_server_13000 (2)" options="-parameters" />
       <module name="eureka_server_13001" options="-parameters" />
       <module name="food_server_10200" options="-parameters" />
+      <module name="food_server_10201" options="-parameters" />
       <module name="orders_server_10600" options="-parameters" />
       <module name="user_server_10100" options="-parameters" />
     </option>
