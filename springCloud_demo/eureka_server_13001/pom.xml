@@ -9,7 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>business_server_10300</artifactId>
+    <groupId>com.Iynew</groupId>
+    <artifactId>eureka_server_13001</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,11 +19,10 @@
     </properties>
 
     <dependencies>
-
-        <!--以下是boot -->
+        <!-- 添加 eureka server 依赖 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
         <!--热部署 gav -->
         <dependency>
@@ -31,28 +31,5 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <!--数据层相关依赖 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!--加入eureka clinet的依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-
-
     </dependencies>
-
-
 </project>

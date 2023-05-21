@@ -15,3 +15,11 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.Iynew.po
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer13000:13000/eureka,http://eurekaServer13001:13001/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}

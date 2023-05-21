@@ -1,0 +1,16 @@
+server:
+  port: 13000
+logging:
+  level:
+    org.springframework: debug
+    debug com.Iynew.mapper: debug
+eureka:
+  instance:
+    hostname: eurekaServer13000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eurekaServer13001:13001/eureka/
+  server:
+    enable-self-preservation: false

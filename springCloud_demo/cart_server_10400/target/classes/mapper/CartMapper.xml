@@ -11,11 +11,14 @@
         <result column="quantity" property="quantity"/>
         <association property="food" javaType="Food" select="com.Iynew.mapper.FoodMapper.getFoodById"
                      column="foodId"/>
+
         <association property="business" javaType="Business"
                      select="com.Iynew.mapper.BusinessMapper.getBusinessById"
                      column="businessId"/>
+
     </resultMap>
-    <select id="listCart" parameterType="Cart" resultMap="cartResultMap">select * from cart
+    <select id="listCart" parameterType="Cart" resultMap="cartResultMap">
+        select * from cart
         <where>
             userId=#{userId}
             <if test="businessId!=null and businessId!=''">and businessId=#{businessId}</if>
