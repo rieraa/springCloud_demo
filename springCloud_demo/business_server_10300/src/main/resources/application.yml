@@ -5,6 +5,13 @@ server:
 spring:
   application:
     name: business-server
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8890
+    openfeign:
+      circuitbreaker:
+        enabled: true
 
   datasource:
     username: root
@@ -14,9 +21,9 @@ spring:
 
 logging:
   level:
-    org.springframework: debug
-    com.Iynew.mapper: debug
-    com.example.feign: DEBUG
+    org.springframework:
+    com.Iynew.mapper:
+    com.example.feign:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.Iynew.po
@@ -29,6 +36,5 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
 
-feign:
-  hystrix:
-    enabled: true
+
+

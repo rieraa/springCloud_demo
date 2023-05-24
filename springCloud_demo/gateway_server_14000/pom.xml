@@ -9,18 +9,34 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>food_server_10200</artifactId>
+    <groupId>com.Iynew</groupId>
+    <artifactId>gateway_server_14000</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
-        <!--以下是boot -->
+        <!--加入gateway依赖 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId>
+        </dependency>
+
+
+
+        <!-- gateway也要向Eureka注册 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <!--热部署 gav -->
         <dependency>
@@ -29,25 +45,6 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <!--数据层相关依赖 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!--加入eureka clinet的依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>

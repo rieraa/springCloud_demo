@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gateway_server_14000" />
         <module name="food_server_10200" />
         <module name="deliveryaddress_server_10500" />
         <module name="food_server_10201" />
@@ -35,6 +36,7 @@
       <module name="eureka_server_13001" options="-parameters" />
       <module name="food_server_10200" options="-parameters" />
       <module name="food_server_10201" options="-parameters" />
+      <module name="gateway_server_14000" options="-parameters" />
       <module name="orders_server_10600" options="-parameters" />
       <module name="user_server_10100" options="-parameters" />
     </option>

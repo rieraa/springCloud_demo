@@ -3,7 +3,7 @@ server:
 logging:
   level:
     org.springframework: debug
-    com.neusoft.mapper: debug
+    com.Iynew.mapper: debug
 spring:
   application:
     name: food-server

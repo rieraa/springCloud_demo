@@ -10,7 +10,6 @@ import com.Iynew.po.CommonResult;
 
 import com.Iynew.service.FoodService;
 
-@CrossOrigin("*")
 @RestController
 @RequestMapping("/FoodController")
 public class FoodController {

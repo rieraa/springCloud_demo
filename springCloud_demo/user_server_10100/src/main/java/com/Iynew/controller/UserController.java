@@ -11,7 +11,7 @@ import com.Iynew.po.CommonResult;
 import com.Iynew.po.User;
 import com.Iynew.service.UserService;
 
-@CrossOrigin("*") //跨域处理
+
 @RestController
 @RequestMapping("/UserController")
 public class UserController {
