@@ -7,6 +7,7 @@ import com.Iynew.service.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/BusinessController")
+@RefreshScope
 public class BusinessController {
     @Autowired
     private BusinessService businessService;
@@ -25,7 +27,7 @@ public class BusinessController {
     @GetMapping("/listBusinessByOrderTypeId/{orderTypeId}")
     public CommonResult<List> listBusinessByOrderTypeId(@PathVariable("orderTypeId") Integer orderTypeId) throws Exception {
         List<Business> list = businessService.listBusinessByOrderTypeId(orderTypeId);
-        return new CommonResult(200, "success", list);
+        return new CommonResult(200, "success(10300)", list);
     }
 
     @GetMapping("/getBusinessById/{businessId}")

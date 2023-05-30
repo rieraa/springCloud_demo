@@ -28,11 +28,17 @@ spring:
           uri: lb://user-server
           predicates:
             - Path=/UserController/*/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: userCircuitBreaker
+                fallbackUri: forward:/fallback/user
 
         - id: foodServer
           uri: lb://food-server
           predicates:
             - Path=/FoodController/*/**
+
 
         - id: businessServer
           uri: lb://business-server
@@ -48,16 +54,32 @@ spring:
           uri: lb://cart-server
           predicates:
             - Path=/CartController/*/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: cartCircuitBreaker
+                fallbackUri: forward:/fallback/cart
 
         - id: deliveryaddressServer
           uri: lb://deliveryaddress-server
           predicates:
-            - Path=/DeliveryaddressController/*/**
+            - Path=/DeliveryAddressController/*/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: deliveryCircuitBreaker
+                fallbackUri: forward:/fallback/delivery
+
 
         - id: ordersServer
           uri: lb://orders-server
           predicates:
             - Path=/OrdersController/*/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: orderCircuitBreaker
+                fallbackUri: forward:/fallback/order
 
 resilience4j:
   circuitbreaker:

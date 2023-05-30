@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      name: food_server_10200
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaServer13000:13000/eureka/,http://eurekaServer13001:13001/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15

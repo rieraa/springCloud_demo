@@ -4,12 +4,14 @@ import com.Iynew.po.CommonResult;
 import com.Iynew.po.Orders;
 import com.Iynew.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/OrdersController")
+@RefreshScope
 public class OrdersController {
     @Autowired
     private OrdersService ordersService;

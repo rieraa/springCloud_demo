@@ -6,15 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway_server_14000" />
         <module name="food_server_10200" />
-        <module name="deliveryaddress_server_10500" />
         <module name="food_server_10201" />
         <module name="eureka_server_13001" />
         <module name="eureka_server_13000" />
+        <module name="orders_server_10601" />
+        <module name="config_server_15001" />
+        <module name="cart_server_10401" />
         <module name="cart_server_10400" />
         <module name="orders_server_10600" />
+        <module name="config_server_15000" />
         <module name="user_server_10100" />
+        <module name="gateway_server_14000" />
+        <module name="business_server_10301" />
+        <module name="deliveryaddress_server_10500" />
         <module name="business_server_10300" />
       </profile>
     </annotationProcessing>
@@ -27,7 +32,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="business_server_10300" options="-parameters" />
+      <module name="business_server_10301" options="-parameters" />
       <module name="cart_server_10400" options="-parameters" />
+      <module name="cart_server_10401" options="-parameters" />
+      <module name="config_server_15000" options="-parameters" />
+      <module name="config_server_15001" options="-parameters" />
       <module name="deliveryaddress_server_105" options="-parameters" />
       <module name="deliveryaddress_server_10500" options="-parameters" />
       <module name="eureka_server_13000" options="-parameters" />
@@ -38,6 +47,7 @@
       <module name="food_server_10201" options="-parameters" />
       <module name="gateway_server_14000" options="-parameters" />
       <module name="orders_server_10600" options="-parameters" />
+      <module name="orders_server_10601" options="-parameters" />
       <module name="user_server_10100" options="-parameters" />
     </option>
   </component>

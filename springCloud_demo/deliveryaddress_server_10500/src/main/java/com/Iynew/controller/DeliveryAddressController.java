@@ -4,6 +4,7 @@ import com.Iynew.po.CommonResult;
 import com.Iynew.po.DeliveryAddress;
 import com.Iynew.service.DeliveryAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/DeliveryAddressController")
+@RefreshScope
 public class DeliveryAddressController {
     @Autowired
     private DeliveryAddressService deliveryAddressService;
@@ -23,8 +25,7 @@ public class DeliveryAddressController {
     }
 
     @GetMapping("/getDeliveryAddressById/{daId}")
-    public CommonResult<DeliveryAddress> getDeliveryAddressById(@PathVariable("daId") Integer
-                                                                        daId) throws Exception {
+    public CommonResult<DeliveryAddress> getDeliveryAddressById(@PathVariable("daId") Integer daId) throws Exception {
         DeliveryAddress deliveryAddress = deliveryAddressService.getDeliveryAddressById(daId);
         return new CommonResult(200, "success", deliveryAddress);
     }
